@@ -1,4 +1,4 @@
-{{define "title"}}Snippet #{{.Snippet.ID}}{{end}}
+{{define "title"}}Verse #{{.Snippet.ID}}{{end}}
 
 {{define "main"}}
   {{with .Snippet}}
@@ -7,7 +7,7 @@
     <strong>{{.Title}}</strong>
     <span>#{{.ID}}</span>
   </div>
-  <pre><code>{{.Content}}</code></pre>
+  <p class='content'>{{.Content}}</p>
   <div class='metadata'>
     <time>{{.Created | humanDate | printf "Created on %s"}}</time>
     <time>{{.Expires | humanDate | printf "Expires on %s"}}</time>
